@@ -45,6 +45,9 @@ r_dir_file(mpdecision, system_server)
 r_dir_file(mpdecision, mediaserver)
 r_dir_file(mpdecision, audioserver)
 
+allow mpdecision cameraserver:dir search;
+allow mpdecision cameraserver:file { read open };
+
 allow mpdecision self:capability sys_nice;
 
 allow mpdecision cameraserver:dir search;
